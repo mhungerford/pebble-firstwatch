@@ -1,0 +1,54 @@
+{
+    "versionLabel": "1.0",
+    "uuid": "4583fcd3-a212-4d72-93b2-189cbafb740e",
+    "appKeys": {},
+    "longName": "FirstWatch",
+    "versionCode": 1,
+    "capabilities": [
+        ""
+    ],
+    "shortName": "FirstWatch",
+    "companyName": "mhungerford@gmail.com",
+    "watchapp": {
+        "watchface": true
+    },
+    "resources": {
+        "media": [
+            {
+                "type": "png",
+                "name": "IMAGE_COFFEE",
+                "file": "images/coffee.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_GIANT",
+                "file": "images/stone-giant.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_BEER",
+                "file": "images/beer.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_YOGA",
+                "file": "images/yoga.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_EARTH",
+                "file": "images/earth.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_MONSTERS",
+                "file": "images/monsters.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_DOJO",
+                "file": "images/dojo1.png"
+            }
+        ]
+    }
+}

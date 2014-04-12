@@ -1,13 +1,9 @@
 {
     "versionLabel": "1.0",
     "uuid": "4583fcd3-a212-4d72-93b2-189cbafb740e",
-    "appKeys": {},
-    "longName": "FirstWatch",
+    "longName": "OpenGameArt.org",
     "versionCode": 1,
-    "capabilities": [
-        ""
-    ],
-    "shortName": "FirstWatch",
+    "shortName": "OpenGameArt.org",
     "companyName": "mhungerford@gmail.com",
     "watchapp": {
         "watchface": true
@@ -15,9 +11,54 @@
     "resources": {
         "media": [
             {
+                "type": "font",
+                "name": "FONT_BOXY_TEXT_30",
+                "file": "fonts/Boxy_Text.ttf"
+            },
+            {
+                "type": "font",
+                "name": "FONT_BOXY_OUTLINE_30",
+                "file": "fonts/Boxy_Outline.ttf"
+            },
+            {
                 "type": "png",
-                "name": "IMAGE_COFFEE",
-                "file": "images/coffee.png"
+                "name": "IMAGE_MINIWOLF",
+                "file": "images/miniwolf.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_GOLEM_II",
+                "file": "images/golem_ii.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_WOLF",
+                "file": "images/wolf.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_BUNNY",
+                "file": "images/bunny.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_SOLDIER_0",
+                "file": "images/soldier-0.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_WIZARD",
+                "file": "images/wizard.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_ROBOT",
+                "file": "images/robot.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_MINITAUR",
+                "file": "images/minitaur.png"
             },
             {
                 "type": "png",
@@ -26,28 +67,18 @@
             },
             {
                 "type": "png",
-                "name": "IMAGE_BEER",
-                "file": "images/beer.png"
+                "name": "IMAGE_SCARECROW",
+                "file": "images/scarecrow.png"
             },
             {
                 "type": "png",
-                "name": "IMAGE_YOGA",
-                "file": "images/yoga.png"
+                "name": "IMAGE_ORC",
+                "file": "images/orc.png"
             },
             {
                 "type": "png",
-                "name": "IMAGE_EARTH",
-                "file": "images/earth.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_MONSTERS",
-                "file": "images/monsters.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_DOJO",
-                "file": "images/dojo1.png"
+                "name": "IMAGE_PRINCESS",
+                "file": "images/princess.png"
             }
         ]
     }

@@ -21,6 +21,11 @@
                 "file": "fonts/Boxy_Outline.ttf"
             },
             {
+                "type": "raw",
+                "name": "IMAGE_OFFSET",
+                "file": "emptyfile"
+            },
+            {
                 "type": "png",
                 "name": "IMAGE_DEMON",
                 "file": "images/demon.png"

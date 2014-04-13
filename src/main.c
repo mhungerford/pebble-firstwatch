@@ -26,15 +26,14 @@ int max_images = 0; //automatically detected
 int image_index = RESOURCE_ID_IMAGE_OFFSET + 1; //Images start after IMAGE_OFFSET
 
 static void do_animation(void){
-  static int animation_selection = 0; //just 0 and 1 for now
-  const int animation_count = 2;
+  static bool animation_selection = false;
 
-  animation_selection = (animation_selection + 1) % animation_count;
+  animation_selection = !animation_selection;
 
-  if (animation_selection == 0) {
-    animation_schedule((Animation*)prop_animation_slide_left);
-  } else {
+  if (animation_selection) {
     animation_schedule((Animation*)prop_animation_slide_up);
+  } else {
+    animation_schedule((Animation*)prop_animation_slide_left);
   }
 }
 

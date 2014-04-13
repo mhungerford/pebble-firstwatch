@@ -1,10 +1,10 @@
 {
-    "versionLabel": "1.0",
-    "uuid": "4583fcd3-a212-4d72-93b2-189cbafb740e",
-    "longName": "OpenGameArt.org",
-    "versionCode": 1,
+    "uuid": "85169e22-95f6-4448-8142-399a94eb8a60",
     "shortName": "OpenGameArt.org",
+    "longName": "OpenGameArt.org",
     "companyName": "mhungerford@gmail.com",
+    "versionLabel": "1.0",
+    "versionCode": 1,
     "watchapp": {
         "watchface": true
     },
@@ -22,13 +22,13 @@
             },
             {
                 "type": "png",
-                "name": "IMAGE_MINIWOLF",
-                "file": "images/miniwolf.png"
+                "name": "IMAGE_DEMON",
+                "file": "images/demon.png"
             },
             {
                 "type": "png",
-                "name": "IMAGE_GOLEM_II",
-                "file": "images/golem_ii.png"
+                "name": "IMAGE_GOLEM",
+                "file": "images/golem.png"
             },
             {
                 "type": "png",
@@ -42,8 +42,8 @@
             },
             {
                 "type": "png",
-                "name": "IMAGE_SOLDIER_0",
-                "file": "images/soldier-0.png"
+                "name": "IMAGE_SCARECROW",
+                "file": "images/scarecrow.png"
             },
             {
                 "type": "png",
@@ -52,23 +52,8 @@
             },
             {
                 "type": "png",
-                "name": "IMAGE_ROBOT",
-                "file": "images/robot.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_MINITAUR",
-                "file": "images/minitaur.png"
-            },
-            {
-                "type": "png",
                 "name": "IMAGE_GIANT",
                 "file": "images/stone-giant.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_SCARECROW",
-                "file": "images/scarecrow.png"
             },
             {
                 "type": "png",
@@ -79,6 +64,16 @@
                 "type": "png",
                 "name": "IMAGE_PRINCESS",
                 "file": "images/princess.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_ROBOT",
+                "file": "images/robot.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_DWARF",
+                "file": "images/dwarf.png"
             }
         ]
     }

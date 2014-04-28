@@ -21,6 +21,16 @@
                 "file": "fonts/Boxy_Outline.ttf"
             },
             {
+                "type": "font",
+                "name": "FONT_BOXY_TEXT_18",
+                "file": "fonts/Boxy_Text.ttf"
+            },
+            {
+                "type": "font",
+                "name": "FONT_BOXY_OUTLINE_18",
+                "file": "fonts/Boxy_Outline.ttf"
+            },
+            {
                 "type": "raw",
                 "name": "IMAGE_OFFSET",
                 "file": "emptyfile"

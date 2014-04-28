@@ -40,6 +40,6 @@ http://opengameart.org/content/glitch-inhabitants-and-cubimals-svg
 
 wizard.png, stone-giant.png, orc.png, robot.png, princess.png, dwarf.png
 License: CC0
-Author: tzunghaor http://openclipart.org/user-detail/tzunghaor
+Author: Prim Andras (aka. tzunghaor)
 http://opengameart.org/content/cartoon-vector-characters
 

@@ -8,8 +8,8 @@ TextLayer* time_outline_layer = NULL;
 TextLayer* time_text_layer = NULL;
 
 //Date Display
-time_t current_time;
-char date_string[64];
+char date_string[16];
+TextLayer* date_outline_layer = NULL;
 TextLayer* date_text_layer = NULL;
 
 //Image Display
@@ -20,6 +20,9 @@ GBitmap* gbitmap_ptr = NULL;
 Layer* animation_layer = NULL;
 PropertyAnimation* prop_animation_slide_left = NULL;
 PropertyAnimation* prop_animation_slide_up = NULL;
+
+static const char *const dname[7] =
+{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 
 //Image indexes and count
 int max_images = 0; //automatically detected
@@ -60,9 +63,13 @@ void tap_handler(AccelAxisType axis, int32_t direction){
 
 void tick_handler(struct tm *tick_time, TimeUnits units_changed){
   if (units_changed & DAY_UNIT) {
-    current_time = time(NULL);
-    strftime(date_string, sizeof(date_string), "%a, %b %d", localtime(&current_time));
-    //layer_mark_dirty(text_layer_get_layer(date_text_layer));
+    time_t current_time = time(NULL);
+    struct tm *current_tm = localtime(&current_time);
+    //strftime(date_string, sizeof(date_string), "%a %-m/%d", localtime(&current_time));
+    snprintf(date_string, sizeof(date_string), "%s %d/%d", 
+      dname[current_tm->tm_wday], current_tm->tm_mon + 1, current_tm->tm_mday);
+    layer_mark_dirty(text_layer_get_layer(date_outline_layer));
+    layer_mark_dirty(text_layer_get_layer(date_text_layer));
   }
 
   clock_copy_time_string(time_string,sizeof(time_string));
@@ -118,7 +125,7 @@ static void window_load(Window *window) {
   bitmap_layer_set_bitmap(bitmap_layer, gbitmap_ptr);
   
   //Setup the time outline display
-  time_outline_layer = text_layer_create(GRect(0, 130, 144, 30));
+  time_outline_layer = text_layer_create(GRect(0, 132, 144, 30));
   text_layer_set_text(time_outline_layer, time_string);
 	text_layer_set_font(time_outline_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOXY_OUTLINE_30)));
   text_layer_set_text_alignment(time_outline_layer, GTextAlignmentCenter);
@@ -130,7 +137,7 @@ static void window_load(Window *window) {
   layer_add_child(window_layer, text_layer_get_layer(time_outline_layer));
 
   //Setup the time display
-  time_text_layer = text_layer_create(GRect(0, 130, 144, 30));
+  time_text_layer = text_layer_create(GRect(0, 132, 144, 30));
   text_layer_set_text(time_text_layer, time_string);
 	text_layer_set_font(time_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOXY_TEXT_30)));
   text_layer_set_text_alignment(time_text_layer, GTextAlignmentCenter);
@@ -142,15 +149,34 @@ static void window_load(Window *window) {
   layer_add_child(window_layer, text_layer_get_layer(time_text_layer));
 
   //Setup the date display
-  current_time = time(NULL);
-  strftime(date_string, sizeof(date_string), "%a, %b %d", localtime(&current_time));
-  date_text_layer = text_layer_create(GRect(4, 148, 88, 18));
-  text_layer_set_text(date_text_layer, date_string);
-	text_layer_set_font(date_text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
- 
-  layer_add_child(window_layer, text_layer_get_layer(date_text_layer));
-  layer_set_hidden(text_layer_get_layer(date_text_layer), true);
+  time_t current_time = time(NULL);
+  struct tm *current_tm = localtime(&current_time);
+  //strftime(date_string, sizeof(date_string), "%a %_m/%d", localtime(&current_time));
+  snprintf(date_string, sizeof(date_string), "%s %d/%d", 
+    dname[current_tm->tm_wday], current_tm->tm_mon + 1, current_tm->tm_mday);
+
+  //date outline
+  date_outline_layer = text_layer_create(GRect(0, 0, 144, 18));
+  text_layer_set_text(date_outline_layer, date_string);
+	text_layer_set_font(date_outline_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOXY_OUTLINE_18)));
+  text_layer_set_text_alignment(date_outline_layer, GTextAlignmentCenter);
+  text_layer_set_background_color(date_outline_layer, GColorClear);
+  text_layer_set_text_color(date_outline_layer, GColorBlack);
+
+  layer_add_child(window_layer, text_layer_get_layer(date_outline_layer));
   
+  //date text
+  date_text_layer = text_layer_create(GRect(0, 0, 144, 18));
+  text_layer_set_text(date_text_layer, date_string);
+	text_layer_set_font(date_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOXY_TEXT_18)));
+  text_layer_set_text_alignment(date_text_layer, GTextAlignmentCenter);
+  text_layer_set_background_color(date_text_layer, GColorClear);
+  text_layer_set_text_color(date_text_layer, GColorWhite);
+
+  layer_add_child(window_layer, text_layer_get_layer(date_text_layer));
+  
+
+
   //Setup tick time handler
   tick_timer_service_subscribe((MINUTE_UNIT), tick_handler);
   

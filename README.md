@@ -17,16 +17,16 @@ License: CC0
 Author: Clint Bellanger
 http://opengameart.org/content/boxy-bold-truetype-font
 
-demon.png
-License: CC-BY 3.0
-Author: Killy Vera (aka. killy)
-http://opengameart.org/content/little-demon-wolf
-
 golem.png, wolf.png
 License: CC-BY 3.0
 Author: Michele Bucelli (aka. Buch)
 http://opengameart.org/content/mechanic-giant
 http://opengameart.org/content/gray-wolf
+
+demon.png
+License: CC-BY 3.0
+Author: Killy Vera (aka. killy)
+http://opengameart.org/content/little-demon-wolf
 
 bunny.png
 License: CC0

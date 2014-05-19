@@ -3,7 +3,7 @@
     "shortName": "OpenGameArt.org",
     "longName": "OpenGameArt.org",
     "companyName": "mhungerford@gmail.com",
-    "versionLabel": "1.0",
+    "versionLabel": "1.1",
     "versionCode": 1,
     "watchapp": {
         "watchface": true
@@ -37,13 +37,13 @@
             },
             {
                 "type": "png",
-                "name": "IMAGE_DEMON",
-                "file": "images/demon.png"
+                "name": "IMAGE_GOLEM",
+                "file": "images/golem.png"
             },
             {
                 "type": "png",
-                "name": "IMAGE_GOLEM",
-                "file": "images/golem.png"
+                "name": "IMAGE_DEMON",
+                "file": "images/demon.png"
             },
             {
                 "type": "png",
